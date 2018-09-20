@@ -7,7 +7,6 @@ extern crate quote;
 extern crate syn;
 
 extern crate proc_macro;
-use heck::CamelCase;
 
 use self::proc_macro::TokenStream;
 
@@ -52,7 +51,7 @@ pub fn implementation(attr: TokenStream, input: TokenStream) -> TokenStream {
 
     let fns = &imp.fns;
     let methods = fns.iter().map(|id| {
-        let method_name = id.to_string().to_camel_case();
+        let method_name = id.to_string();
         syn::Ident::new(&method_name, id.span())
     });
 

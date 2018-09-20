@@ -13,4 +13,3 @@ proc-macro = true
 syn = { version = "0.14", features = ["full", "fold"] }
 quote = { version = "0.6", default-features = false }
 proc-macro2 = { version = "0.4", features = ["nightly"] }
-heck = "0.3"
