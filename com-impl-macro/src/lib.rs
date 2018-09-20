@@ -6,9 +6,10 @@ extern crate quote;
 #[macro_use]
 extern crate syn;
 
+extern crate proc_macro;
 use heck::CamelCase;
 
-use proc_macro::TokenStream;
+use self::proc_macro::TokenStream;
 
 use syn::fold::Fold;
 use syn::{Ident, ItemStruct, Fields, FieldsNamed};
